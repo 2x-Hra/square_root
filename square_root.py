@@ -91,6 +91,11 @@ def all_cycles(dou_arr):
     return cycles        
 
 def impossible_finder(arr):
+    '''
+        this function will find those sample that is impossible
+
+
+    '''
     counter = 0
     cycle_counter = 0
 
@@ -112,6 +117,9 @@ def impossible_finder(arr):
 
 
 def odd_roots(odd_cycle):
+
+    
+
     mid_index = (len(odd_cycle)//2 ) 
     matrix_a = odd_cycle[0:mid_index]
     matrix_b = odd_cycle[mid_index+1:]
@@ -161,7 +169,7 @@ def rootsFinder(cycle_sample):
 # print(rootsFinder([[1,2,0]]))
 def squareRootExe(sample_orig):
     '''
-        sample_orig = [2,3,0,1]
+        for example sample_orig = [2,3,0,1]
     '''
     sample_cycles = all_cycles(dou_maker(sample_orig))
     cycles_roots = rootsFinder(sample_cycles)
